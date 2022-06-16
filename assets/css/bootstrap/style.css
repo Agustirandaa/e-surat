@@ -1,0 +1,389 @@
+:root {
+    --primary-color: rgb(11, 78, 179);
+  }
+/* Global css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+  background: #f8f8f8;
+}
+.navbar{
+  background-color: #22738a;
+}
+#navbar{
+  margin: 0 0 50px 0;
+}
+.form-label{
+  font-weight: bold;
+}
+/* Css index dashboard */
+
+#navbar-banner{
+  position: relative;
+}
+.banner-image{
+  background-image: url('../../image/bg.jpg');
+  height: 70vh;
+  opacity: .6;
+  background-size: cover;
+  background-repeat: no-repeat;
+ background-position: center, center;
+}
+.banner-title{
+  width: 70%;
+  position: absolute;
+  top: 125px;
+  left: 180px;
+}
+.banner-title h3 {
+  color: #000;
+  font-weight: bold;
+  font-size: 3vmax;
+  line-height: 1.7em;
+  text-shadow: 1px 1px 5px #22738a;
+} 
+.banner-title b {
+  color: #000;
+  font-size: 1.4vmax;
+  line-height: 1.7em;
+  display: block;
+  text-shadow: 1px 1px 5px #FFF;
+} 
+.btn-banner{
+  background-color: #22738a;
+  font-weight: 500;
+  margin: 30px 0 0 0;
+}
+/* End css index dashboard */
+
+/* Css form surat */
+#content{
+  margin: 70px 0 0 0;
+}
+
+  /* Progressbar */
+  .progresbar {
+    position: relative;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+  }
+  
+  .progresbar::before,
+  .progres {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #dcdcdc;
+  }
+  
+  .progres {
+    background-color: #22738a;
+    width: 0%;
+    transition: 0.3s;
+  }
+  
+  .progres-step {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .progres-step::before {
+    counter-increment: step;
+    content: counter(step);
+  }
+  .progres-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .progres-step-active {
+    background-color: #22738a;
+    color: #f3f3f3;
+  } 
+/* End progress bar */
+
+.box{
+  min-width: 200px;
+  max-width: 600px;
+  margin: auto;
+}
+.box-title h3{
+  font-size: 38px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #22738a;
+  padding: 10px 0 10px 0;
+}
+.box-form{
+  background-color: white;
+  padding: 15px;
+  border-radius: 7px;
+}
+.box-form-title{
+  margin-bottom: 20px;
+}
+.box-form-title strong{
+  font-size: 28px;
+  color: #000;
+  text-shadow: 1px 1px 1px rgb(156, 76, 76);
+
+}
+.btn-width{
+  width: 100px;
+}
+.btn-print{
+  visibility: hidden;
+}
+
+.form-step{
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+.form-step-active{
+  display: block;
+}
+
+.form-label{
+  font-weight: bold;
+}
+.form-control{
+  background-color: #DEEAF6;
+}
+
+.field-input{
+  position: relative;
+  border-radius: 3px;
+}
+.alert-input-danger {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: .9em;
+  color: red;
+}
+.alert-input-success {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: .9em;
+  color: green;
+}
+/* End form surat */
+
+/* Css Modal box preview */
+#previewModal{
+  background-color: rgba(255, 255, 255, .3);
+  backdrop-filter: blur(10px);
+} 
+
+.modal-content{
+  background-color: #fff;
+}
+.modal-title{
+  font-weight: bold;
+  font-family: Arial;
+}
+.modal-body, .modal-footer{
+  background-color: #eee;
+  border-radius: 5px;
+}
+.preview-form-data{
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+.preview-header{
+  display: flex;
+  /* background-color: red; */
+  flex-direction: row;
+  padding-bottom: 10px;
+  border-bottom: 3px solid black;
+}
+.preview-header img{
+  max-width: 7vmax;
+  min-width: 90px;
+}
+.image-first, .image-second{
+  flex: 1;
+  align-items: center;
+}
+.text-preview-header{
+  flex: 3;
+  text-align: center;
+}
+.text-preview-header strong{
+  font-size: 1.3vmax;
+  line-height: 20px;
+}
+.text-preview-header small{
+  display: block;
+  font-size: .9vmax;
+  line-height: 20px;
+}
+.preview-form .text{
+  font-size: 13px;
+}
+
+.value-text{
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.preview-data-form small,
+.preview-data-form strong,
+.preview-data-form p,
+.form-data-date,
+.footer-data{
+  display: block;
+  font-size: 13px;
+}
+.text-justify{
+  text-align: justify;
+}
+.form-data-date #row1{
+  width: 100px;
+}
+.form-data-date #row2{
+  width: 10px;
+}
+.footer-data .text-line{
+margin: 0 0 30px 0;  
+}
+/* End Css Modal box preview */
+
+
+
+
+
+
+/* Responsive tablet */
+@media screen and (max-width: 999px) {
+
+  /* Css index dashboard */
+    .banner-image{
+      height: 65vh;
+  }
+  .banner-title{
+      left: 80px;
+  }
+  .banner-title h3{
+      font-size: 35px;
+  }
+  .banner-title b{
+      font-size: 17px;
+  }
+  .btn-banner{
+      padding: 2px;
+  }
+
+   /* CSS FROM SURAT */
+
+   .text-title{
+    margin-left: -15px;
+    padding-left: 5px; 
+    }
+    .preview-header img{
+        max-width: 8vmax;
+    }
+
+    .text-preview-header small{
+        line-height: 12px;
+    }
+    .preview-header img{
+        max-width: 7vmax;
+        min-width: 70px;
+    }
+    .preview-data-form small,
+    .preview-data-form strong,
+    .preview-data-form p,
+    .preview-form .text,
+    .form-data-date,
+    .footer-data,
+    .value-text {
+    font-size: .9vmax;
+    }
+    .form-data-date #row1{
+        width: 60px;
+    }
+    .footer-data .text-line{
+        margin: 0 0 20px 0;  
+    }
+
+    }
+
+/* Responsive hp */
+@media screen and (max-width: 567px) {
+  /* CSS INDEX DASHBOAR */
+  .banner-title{
+    top: 60px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .banner-image{
+    height: 50vh;
+  } 
+    .banner-title h3{
+        font-size: 3.9vmax;
+    }
+    .banner-title b{
+        font-size: 14px;
+    }
+    .btn-banner{
+      font-size: 13px;
+    }
+     /* CSS FROM SURAT */
+
+     .preview-header img{
+      max-width: 10vmax;
+  }
+  .footer-data .text-line{
+      margin: 0 0 20px 0;  
+      }
+      .preview-data-form p{
+          line-height: 0px;
+      }
+      .btn-width{
+        width: 100px;
+        margin: 10px;
+    }
+
+}
+
+/* Keyframe from */
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
